@@ -1,6 +1,6 @@
 {
     "name": "@martin-pettersson/eslint-plugin-spacing-rules",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Provides a set of augmented spacing rules.",
     "keywords": [
         "eslint",
@@ -24,6 +24,7 @@
     "main": "lib/index.js",
     "type": "module",
     "exports": {
+        ".": "./lib/index.js",
         "./mixins": "./lib/mixins/index.js",
         "./rules": "./lib/rules/index.js"
     },
