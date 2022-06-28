@@ -1,6 +1,6 @@
 {
     "name": "@martin-pettersson/eslint-plugin-spacing-rules",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Provides a set of augmented spacing rules.",
     "keywords": [
         "eslint",
