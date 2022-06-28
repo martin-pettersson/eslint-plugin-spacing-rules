@@ -1,0 +1,46 @@
+{
+    "name": "@martin-pettersson/eslint-plugin-spacing-rules",
+    "version": "0.1.0",
+    "description": "Provides a set of augmented spacing rules.",
+    "keywords": [
+        "eslint",
+        "eslintplugin",
+        "eslint-plugin",
+        "spacing"
+    ],
+    "author": {
+        "name": "Martin Pettersson",
+        "email": "martin@moonwalkingbits.com"
+    },
+    "homepage": "https://github.com/martin-pettersson/eslint-plugin-spacing-rules#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/martin-pettersson/eslint-plugin-spacing-rules.git"
+    },
+    "bugs": {
+        "url": "https://github.com/martin-pettersson/eslint-plugin-spacing-rules/issues"
+    },
+    "license": "MIT",
+    "main": "lib/index.js",
+    "type": "module",
+    "exports": {
+        "./mixins": "./lib/mixins/index.js",
+        "./rules": "./lib/rules/index.js"
+    },
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "test": "mocha --recursive test"
+    },
+    "engines": {
+        "node": ">=12.4"
+    },
+    "devDependencies": {
+        "eslint": ">=6",
+        "mocha": "^10.0.0"
+    },
+    "peerDependencies": {
+        "eslint": ">=6"
+    }
+}
