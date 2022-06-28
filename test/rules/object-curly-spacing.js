@@ -1,17 +1,15 @@
-import rules from "@martin-pettersson/eslint-plugin-spacing-rules/rules";
-import { RuleTester } from "eslint";
-import { fileURLToPath } from "url";
-import { resolve } from "path";
+const { RuleTester } = require("eslint");
+const { ["object-curly-spacing"]: rule } = require("../../lib/rules/index.js");
+const { resolve } = require("path");
 
 const flowStubParserNeverInvalid = resolve(
-    fileURLToPath(new URL(".", import.meta.url)),
-    "../fixtures/parsers/object-curly-spacing/flow-stub-parser-never-invalid.cjs"
+    __dirname,
+    "../fixtures/parsers/object-curly-spacing/flow-stub-parser-never-invalid.js"
 );
 const flowStubParserNeverValid = resolve(
-    fileURLToPath(new URL(".", import.meta.url)),
-    "../fixtures/parsers/object-curly-spacing/flow-stub-parser-never-valid.cjs"
+    __dirname,
+    "../fixtures/parsers/object-curly-spacing/flow-stub-parser-never-valid.js"
 );
-const { ["object-curly-spacing"]: rule } = rules;
 
 new RuleTester().run("object-curly-spacing", rule, {
     valid: [

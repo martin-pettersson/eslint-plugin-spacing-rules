@@ -1,17 +1,15 @@
-import rules from "@martin-pettersson/eslint-plugin-spacing-rules/rules";
-import { RuleTester } from "eslint";
-import { fileURLToPath } from "url";
-import { resolve } from "path";
+const { RuleTester } = require("eslint");
+const { ["array-bracket-spacing"]: rule } = require("../../lib/rules/index.js");
+const { resolve } = require("path");
 
 const flowDestructuring1 = resolve(
-    fileURLToPath(new URL(".", import.meta.url)),
-    "../fixtures/parsers/array-bracket-spacing/flow-destructuring-1.cjs"
+    __dirname,
+    "../fixtures/parsers/array-bracket-spacing/flow-destructuring-1.js"
 );
 const flowDestructuring2 = resolve(
-    fileURLToPath(new URL(".", import.meta.url)),
-    "../fixtures/parsers/array-bracket-spacing/flow-destructuring-2.cjs"
+    __dirname,
+    "../fixtures/parsers/array-bracket-spacing/flow-destructuring-2.js"
 );
-const { ["array-bracket-spacing"]: rule } = rules;
 
 new RuleTester().run("array-bracket-spacing", rule, {
     valid: [
